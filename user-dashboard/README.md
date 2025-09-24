@@ -26,3 +26,37 @@ It supports viewing, adding, editing, deleting users, as well as pagination, sea
 - JavaScript (ES6+), HTML, CSS
 
 
+## Setup & Installation
+
+1. Clone the repository
+
+git clone https://github.com/rovinpal/user-dashboard
+cd user-dashboard
+
+2. Install dependencies
+npm install
+
+3. Start the development server
+npm run dev
+
+4. Open in browser
+ex: http://localhost:5173
+
+
+## Assumptions
+- Newly added users are stored only in local state since JSONPlaceholder cannot persist them
+- User IDs <= 10 are considered existing API users; IDs > 10 are newly added
+- Department field is optional
+- Sorting, filtering, and pagination are performed on client-side
+
+
+## Challenges Faced
+- JSONPlaceholder does not persist new users, so had to manage them in local state
+- Handling updates for newly added users required careful state management
+- Ensuring pagination, search, sort, and filter all work together on client-side
+
+
+## Improvements (if more time allowed)
+- Enhance filter options with multi-select departments
+- Implement infinite scroll or virtualized list for better performance
+- Improve responsive design and accessibility (keyboard navigation, ARIA labels)
